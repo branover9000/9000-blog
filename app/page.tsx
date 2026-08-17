@@ -7,8 +7,8 @@ export default function Home() {
       <Image
         src="/images/skull.png"
         alt="Skull illustration"
-        width={300}
-        height={150}
+        width={200}
+        height={100}
       />
       <h1 className="text-7xl font-cabazon text-red-800">Brandon Marshall</h1>
       <p className="text-6xl font-cabazon">Creative Developer</p>
