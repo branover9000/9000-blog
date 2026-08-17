@@ -1,15 +1,72 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
+
 export default function Navbar() {
+  const pathname = usePathname();
   return (
     <header>
-      <nav className="flex justify-center gap-6 w-full max-w-6xl mx-auto px-8 py-4 font-cabazon">
-        <Link href="/" className="text-red-600">Home</Link>
-        <Link href="/about" className="hover:text-red-800 transistion-colors">About</Link>
-        <Link href="/posts" className="hover:text-red-800 transistion-colors">Posts</Link>
-        <Link href="/portfolio" className="hover:text-red-800 transistion-colors">Portfolio</Link>
-        <Link href="/contact" className="hover:text-red-800 transistion-colors">Contact</Link>
+      <nav className="flex justify-center gap-6 w-full max-w-6xl mx-auto px-8 py-4 font-cabazon text-xl">
+        <Link
+          href="/"
+          className={
+            pathname === "/"
+              ? "text-red-800"
+              : "hover:text-red-800 transition-colors"
+          }
+        >
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className={
+            pathname === "/about"
+              ? "text-red-800"
+              : "hover:text-red-800 transition-colors"
+          }
+        >
+          About
+        </Link>
+        <Link
+          href="/posts"
+          className={
+            pathname === "/posts"
+              ? "text-red-800"
+              : "hover:text-red-800 transition-colors"
+          }
+        >
+          Posts
+        </Link>
+        <Link
+          href="/portfolio"
+          className={
+            pathname === "/portfolio"
+              ? "text-red-800"
+              : "hover:text-red-800 transition-colors"
+          }
+        >
+          Portfolio
+        </Link>
+        <Link
+          href="/contact"
+          className={
+            pathname === "/contact"
+              ? "text-red-800"
+              : "hover:text-red-800 transition-colors"
+          }
+        >
+          Contact
+        </Link>
       </nav>
-      <div className="border-t-2 border-black w-64 mx-auto" />
+      <Image
+        src="/images/dividers/navbar-divider1.svg"
+        alt=""
+        width={350}
+        height={10}
+        className="mx-auto"
+      />
     </header>
-);
+  );
 }
