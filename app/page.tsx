@@ -7,19 +7,19 @@ export default function Home() {
       <Image
         src="/images/skull.png"
         alt="Skull illustration"
-        width={150}
+        width={300}
         height={150}
       />
-      <h1 className="text-5xl font-cabazon text-red-800">Brandon Marshall</h1>
-      <p className="text-3xl font-cabazon">Creative Developer</p>
+      <h1 className="text-7xl font-cabazon text-red-800">Brandon Marshall</h1>
+      <p className="text-6xl font-cabazon">Creative Developer</p>
       <Image
         src="/images/dividers/navbar-divider2.svg"
         alt=""
-        width={250}
+        width={350}
         height={15}
         className="my-4"
       />
-      <p className="mt-2 text-xl italic">
+      <p className="mt-2 text-2xl italic">
         Learning, building, and turning{" "}
         <span className="text-red-800">ideas</span> into{" "}
         <span className="text-red-800">experiences.</span>

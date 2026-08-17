@@ -8,7 +8,7 @@ export default function Navbar() {
   const pathname = usePathname();
   return (
     <header>
-      <nav className="flex justify-center gap-6 w-full max-w-6xl mx-auto px-8 py-4 font-cabazon text-xl">
+      <nav className="flex justify-center gap-6 w-full max-w-6xl mx-auto px-8 py-4 font-cabazon text-3xl">
         <Link
           href="/"
           className={
@@ -63,7 +63,7 @@ export default function Navbar() {
       <Image
         src="/images/dividers/navbar-divider1.svg"
         alt=""
-        width={350}
+        width={450}
         height={10}
         className="mx-auto"
       />
