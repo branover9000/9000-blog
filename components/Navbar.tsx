@@ -63,9 +63,10 @@ export default function Navbar() {
       <Image
         src="/images/dividers/navbar-divider1.svg"
         alt=""
-        width={450}
-        height={10}
+        width={193}
+        height={17}
         className="mx-auto"
+        style={{ width: "450px", height: "auto" }}
       />
     </header>
   );

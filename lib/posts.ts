@@ -1,3 +1,11 @@
+export type Post = {
+  id: number;
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+};
+
 export const posts = [
   {
     id: 1,

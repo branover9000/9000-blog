@@ -1,11 +1,5 @@
 import Link from "next/link";
-type Post = {
-  id: number;
-  slug: string;
-  title: string;
-  date: string;
-  excerpt: string;
-};
+import type { Post } from "@/lib/posts";
 
 export default function PostCard({ post }: { post: Post }) {
   return (

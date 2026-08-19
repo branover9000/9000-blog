@@ -7,17 +7,20 @@ export default function Home() {
       <Image
         src="/images/skull.png"
         alt="Skull illustration"
-        width={200}
-        height={100}
+        width={256}
+        height={274}
+        loading="eager"
+        style={{ width: "200px", height: "auto" }}
       />
       <h1 className="text-7xl font-cabazon text-red-800">Brandon Marshall</h1>
       <p className="text-6xl font-cabazon">Creative Developer</p>
       <Image
         src="/images/dividers/navbar-divider2.svg"
         alt=""
-        width={350}
-        height={15}
+        width={206}
+        height={17}
         className="my-4"
+        style={{ width: "350px", height: "auto" }}
       />
       <p className="mt-2 text-2xl italic">
         Learning, building, and turning{" "}
