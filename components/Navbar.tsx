@@ -2,78 +2,47 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+
+function NavLink({ href, label, isActive }: { href: string; label: string; isActive: boolean }) {
+  return (
+    <Link
+      href={href}
+      className={
+        isActive
+          ? "border-b-2 border-red-800 pb-1 text-red-800"
+          : "border-b-2 border-transparent pb-1 transition-colors hover:border-red-800 hover:text-red-800"
+      }
+    >
+      {label}
+    </Link>
+  );
+}
 
 export default function Navbar() {
   const pathname = usePathname();
   return (
-    <header className="px-12 pt-8">
-      <div className="mx-auto flex w-full max-w-6xl items-end justify-between border-b-2 border-black pb-4">
+    <header className="w-full px-12 pt-4 shadow-[0_6px_8px_-8px_rgba(0,0,0,0.4)]">
+      <div className="mx-auto flex w-full max-w-6xl items-end justify-between pb-4">
         <Link href="/" className="font-cabazon text-4xl leading-none tracking-wide transition-colors hover:text-red-800">
           Branover<span className="text-red-800">9000</span>
         </Link>
         <nav className="flex items-center gap-9 font-cabazon text-3xl leading-none">
-          <Link
-            href="/"
-            className={
-              pathname === "/"
-                ? "border-b-2 border-red-800 pb-1 text-red-800"
-                : "border-b-2 border-transparent pb-1 transition-colors hover:border-red-800 hover:text-red-800"
-            }
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className={
-              pathname === "/about"
-                ? "border-b-2 border-red-800 pb-1 text-red-800"
-                : "border-b-2 border-transparent pb-1 transition-colors hover:border-red-800 hover:text-red-800"
-            }
-          >
-            About
-          </Link>
-          <Link
-            href="/posts"
-            className={
-              pathname === "/posts"
-                ? "border-b-2 border-red-800 pb-1 text-red-800"
-                : "border-b-2 border-transparent pb-1 transition-colors hover:border-red-800 hover:text-red-800"
-            }
-          >
-            Posts
-          </Link>
-          <Link
-            href="/portfolio"
-            className={
-              pathname === "/portfolio"
-                ? "border-b-2 border-red-800 pb-1 text-red-800"
-                : "border-b-2 border-transparent pb-1 transition-colors hover:border-red-800 hover:text-red-800"
-            }
-          >
-            Portfolio
-          </Link>
-          <Link
-            href="/contact"
-            className={
-              pathname === "/contact"
-                ? "border-b-2 border-red-800 pb-1 text-red-800"
-                : "border-b-2 border-transparent pb-1 transition-colors hover:border-red-800 hover:text-red-800"
-            }
-          >
-            Contact
-          </Link>
+          <NavLink href="/" label="Home" isActive={pathname === "/"} />
+          <NavLink href="/about" label="About" isActive={pathname === "/about"} />
+          <NavLink href="/posts" label="Posts" isActive={pathname === "/posts"} />
+          <NavLink href="/portfolio" label="Portfolio" isActive={pathname === "/portfolio"} />
+          <NavLink href="/contact" label="Contact" isActive={pathname === "/contact"} />
         </nav>
       </div>
-      <Image
+      {/* <Image
         src="/images/dividers/navbar-divider1.svg"
         alt=""
-        width={193}
+        width={1000}
         height={17}
         className="mx-auto mt-3"
         loading="eager"
-        style={{ width: "330px", height: "auto" }}
-      />
+        style={{ width: "1000px", height: "40px" }}
+      /> */}
     </header>
   );
 }

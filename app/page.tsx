@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { FaGithub, FaYoutube, FaXTwitter } from "react-icons/fa6";
+import SocialLink from "@/components/SocialLink";
 
 export default function Home() {
   return (
     <section className="mx-auto flex min-h-[calc(100vh-145px)] w-full max-w-6xl flex-col items-center justify-center px-12 pb-24 pt-8 text-center">
-      <div className="w-full border-y-2 border-black py-10">
+      <div className="w-full">
         <Image
           src="/images/skull.png"
           alt="Skull illustration"
@@ -31,35 +32,15 @@ export default function Home() {
         </p>
       </div>
       <div className="mt-8 flex gap-3">
-        <a
-          href="https://x.com/branover9000"
-          className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-black bg-black text-white transition-colors hover:border-red-800 hover:bg-red-800"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit Brandon Marshall on X"
-        >
+        <SocialLink href="https://x.com/branover9000" ariaLabel="Visit Brandon Marshall on X">
           <FaXTwitter size={20} />
-        </a>
-
-        <a
-          href="https://github.com/branover9000"
-          className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-black bg-black text-white transition-colors hover:border-red-800 hover:bg-red-800"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit Brandon Marshall on GitHub"
-        >
+        </SocialLink>
+        <SocialLink href="https://github.com/branover9000" ariaLabel="Visit Brandon Marshall on GitHub">
           <FaGithub size={20} />
-        </a>
-
-        <a
-          href="https://www.youtube.com/@branover9000"
-          className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-black bg-black text-white transition-colors hover:border-red-800 hover:bg-red-800"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit Brandon Marshall on YouTube"
-        >
+        </SocialLink>
+        <SocialLink href="https://www.youtube.com/@branover9000" ariaLabel="Visit Brandon Marshall on YouTube">
           <FaYoutube size={20} />
-        </a>
+        </SocialLink>
       </div>
     </section>
   );

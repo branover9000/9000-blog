@@ -6,6 +6,7 @@ import { mdxComponents } from "@/mdx-components";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import PageHeading from "@/components/PageHeading";
 
 export async function generateMetadata({
   params,
@@ -44,7 +45,7 @@ export default async function Post({
 
       <header className="mt-10 border-b-2 border-black pb-8">
         <p className="text-sm text-red-800">{post.date}</p>
-        <h1 className="mt-3 font-cabazon text-7xl leading-none text-red-800">{post.title}</h1>
+        <PageHeading className="mt-3">{post.title}</PageHeading>
       </header>
 
       <div className="mt-10 text-lg leading-relaxed">

@@ -1,3 +1,5 @@
+import PageHeading from "@/components/PageHeading";
+
 export const metadata = {
   title: "About Me",
   description:
@@ -7,9 +9,9 @@ export const metadata = {
 export default function About() {
   return (
     <section className="mx-auto w-full max-w-5xl px-12 py-20">
-      <header className="border-b-2 border-black pb-8">
-        <h1 className="font-cabazon text-7xl leading-none text-red-800">About Me</h1>
-        <p className="mt-5 max-w-3xl text-xl leading-relaxed">
+      <header>
+        <PageHeading>About Me</PageHeading>
+        <p className="mt-6 max-w-3xl text-xl leading-relaxed">
         I&apos;m a developer, 3D artist/designer, and game development
         enthusiast who enjoys learning by building things.
       </p>
@@ -59,7 +61,7 @@ export default function About() {
           </p>
           <p className="mt-4 leading-relaxed">
             Most of my repositories are a mix of web development, game development,
-            3D art, and things I&apos;m building just to learn.
+            3D art.
           </p>
         </section>
       </div>
