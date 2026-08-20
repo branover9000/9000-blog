@@ -21,12 +21,12 @@ export default function About() {
           <h2 className="font-cabazon text-4xl leading-none">Development</h2>
           <p className="mt-4 leading-relaxed">Currently learning and working with:</p>
           <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-2 text-sm leading-relaxed">
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Next.js</li>
-            <li>Node.js</li>
-            <li>Tailwind CSS</li>
-            <li>C++</li>
+            <li className="border border-black px-3 py-1">JavaScript</li>
+            <li className="border border-black px-3 py-1">React</li>
+            <li className="border border-black px-3 py-1">Next.js</li>
+            <li className="border border-black px-3 py-1">Node.js</li>
+            <li className="border border-black px-3 py-1">Tailwind CSS</li>
+            <li className="border border-black px-3 py-1">C++</li>
           </ul>
         </section>
         <section className="border-t-2 border-red-800 pt-5">
@@ -46,11 +46,11 @@ export default function About() {
             I also create 3D characters and assets, using tools such as:
           </p>
           <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-2 text-sm leading-relaxed">
-            <li>Blender</li>
-            <li>ZBrush</li>
-            <li>Unreal Engine</li>
-            <li>Character Creator</li>
-            <li>Marvelous Designer</li>
+            <li className="border border-black px-3 py-1">Blender</li>
+            <li className="border border-black px-3 py-1">ZBrush</li>
+            <li className="border border-black px-3 py-1">Unreal Engine</li>
+            <li className="border border-black px-3 py-1">Character Creator</li>
+            <li className="border border-black px-3 py-1">Marvelous Designer</li>
           </ul>
         </section>
         <section className="border-t-2 border-red-800 pt-5">
