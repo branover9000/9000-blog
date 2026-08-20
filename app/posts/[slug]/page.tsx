@@ -4,6 +4,7 @@ import fs from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { mdxComponents } from "@/mdx-components";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export default async function Post({
   params,
@@ -12,14 +13,16 @@ export default async function Post({
 }) {
   const { slug } = await params;
 
+  const post = posts.find((post) => post.slug === slug);
+  if (!post) {
+    notFound();
+  }
+  
   const postsDirectory = path.join(process.cwd(), "content", "posts");
   const filePath = path.join(postsDirectory, `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, "utf8");
 
-  const post = posts.find((post) => post.slug === slug);
-  if (!post) {
-    return <h1>Post not found</h1>;
-  }
+
 
   return (
     <article>
