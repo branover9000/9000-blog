@@ -14,8 +14,8 @@ export default function PostImage({
   centered,
 }: PostImageProps) {
   return (
-    <div style={{ width }} className={centered ? "mx-auto" : ""}>
-      <Image src={src} alt={alt} width={1200} height={800} />;
+    <div style={{ width }} className={`max-w-full overflow-hidden ${centered ? "mx-auto" : ""}`}>
+      <Image src={src} alt={alt} width={1200} height={800} className="h-auto w-full" />;
     </div>
   );
 }

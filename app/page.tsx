@@ -4,7 +4,7 @@ import SocialLink from "@/components/SocialLink";
 
 export default function Home() {
   return (
-    <section className="mx-auto flex min-h-[calc(100vh-145px)] w-full max-w-6xl flex-col items-center justify-center px-12 pb-24 pt-8 text-center">
+    <section className="mx-auto flex min-h-[calc(100vh-145px)] w-full max-w-6xl flex-col items-center justify-center px-12 pb-24 pt-8 text-center max-md:min-h-0 max-md:px-6 max-md:pb-12 max-md:pt-8">
       <div className="w-full">
         <Image
           src="/images/skull.png"
@@ -12,20 +12,20 @@ export default function Home() {
           width={256}
           height={274}
           loading="eager"
-          className="mx-auto mb-4"
+          className="mx-auto mb-4 max-w-full"
           style={{ width: "230px", height: "auto" }}
         />
-        <h1 className="font-cabazon text-8xl leading-none text-red-800">Brandon Marshall</h1>
-        <p className="mt-2 font-cabazon text-6xl leading-none">Creative Developer</p>
+        <h1 className="font-cabazon text-8xl leading-none text-red-800 max-md:text-5xl">Brandon Marshall</h1>
+        <p className="mt-2 font-cabazon text-6xl leading-none max-md:text-3xl">Creative Developer</p>
         <Image
           src="/images/dividers/navbar-divider2.svg"
           alt=""
           width={206}
           height={17}
-          className="mx-auto my-6"
+          className="mx-auto my-6 max-w-full"
           style={{ width: "370px", height: "auto" }}
         />
-        <p className="font-change text-2xl italic leading-relaxed">
+        <p className="font-change text-2xl italic leading-relaxed max-md:text-lg">
           Learning, building, and turning{" "}
           <span className="text-red-800">ideas</span> into{" "}
           <span className="text-red-800">experiences.</span>

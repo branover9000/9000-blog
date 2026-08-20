@@ -38,7 +38,7 @@ export default async function Post({
   const fileContent = fs.readFileSync(filePath, "utf8");
 
   return (
-    <article className="mx-auto w-full max-w-4xl px-12 py-20">
+    <article className="mx-auto w-full max-w-4xl px-12 py-20 max-md:px-6 max-md:py-12">
       <Link href="/posts" className="inline-block border-b-2 border-red-800 pb-1 text-sm text-red-800 transition-colors hover:border-black hover:text-black">
         ← Back to Posts
       </Link>
@@ -48,7 +48,7 @@ export default async function Post({
         <PageHeading className="mt-3">{post.title}</PageHeading>
       </header>
 
-      <div className="mt-10 text-lg leading-relaxed">
+      <div className="mt-10 text-lg leading-relaxed max-md:text-base">
         <MDXRemote source={fileContent} components={mdxComponents} />
       </div>
     </article>

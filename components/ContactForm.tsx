@@ -16,20 +16,20 @@ export default function ContactForm() {
           type="text"
           name="name"
           placeholder="Name"
-          className="border-2 border-black bg-[#fffdf7] px-4 py-3 text-base outline-none transition-colors placeholder:text-stone-500 focus:border-red-800"
+          className="border-2 border-black bg-[#fffdf7] px-4 py-3 text-base outline-none transition-colors placeholder:text-stone-500 focus:border-red-800 max-md:px-3 max-md:py-2 max-md:text-sm"
         />
         <input
           type="email"
           name="email"
           placeholder="Email"
-          className="border-2 border-black bg-[#fffdf7] px-4 py-3 text-base outline-none transition-colors placeholder:text-stone-500 focus:border-red-800"
+          className="border-2 border-black bg-[#fffdf7] px-4 py-3 text-base outline-none transition-colors placeholder:text-stone-500 focus:border-red-800 max-md:px-3 max-md:py-2 max-md:text-sm"
         />
         <textarea
           name="message"
           placeholder="Message"
-          className="min-h-40 border-2 border-black bg-[#fffdf7] px-4 py-3 text-base outline-none transition-colors placeholder:text-stone-500 focus:border-red-800"
+          className="min-h-40 border-2 border-black bg-[#fffdf7] px-4 py-3 text-base outline-none transition-colors placeholder:text-stone-500 focus:border-red-800 max-md:min-h-32 max-md:px-3 max-md:py-2 max-md:text-sm"
         />
-        <button type="submit" className="w-fit border-2 border-black bg-black px-6 py-3 font-cabazon text-3xl leading-none text-white transition-colors hover:border-red-800 hover:bg-red-800">
+        <button type="submit" className="w-fit border-2 border-black bg-black px-6 py-3 font-cabazon text-3xl leading-none text-white transition-colors hover:border-red-800 hover:bg-red-800 max-md:px-4 max-md:py-2 max-md:text-xl">
           Send Message
         </button>
       </form>

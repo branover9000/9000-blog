@@ -10,11 +10,11 @@ export default function ProjectCard({ project }: { project: Project }) {
         alt={project.title}
         width={800}
         height={500}
-        className="h-64 w-full border-b-2 border-black object-cover transition-transform duration-500 group-hover:scale-105"
+        className="h-64 w-full border-b-2 border-black object-cover transition-transform duration-500 group-hover:scale-105 max-md:h-48"
         loading="eager"
       />
       <div className="p-6">
-        <h2 className="font-cabazon text-4xl leading-none">
+        <h2 className="font-cabazon text-4xl leading-none max-md:text-2xl">
           <Link href={project.link} className="transition-colors hover:text-red-800">
             {project.title}
           </Link>
