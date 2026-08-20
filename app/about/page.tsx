@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "About Me",
+  description:
+    "Learn more about my background, interests, and the creative work I enjoy building.",
+};
+
 export default function About() {
   return (
     <section className="w-full max-w-3xl mx-auto px-8 py-16">

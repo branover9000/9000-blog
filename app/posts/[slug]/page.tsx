@@ -5,6 +5,20 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { mdxComponents } from "@/mdx-components";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = posts.find((post) => post.slug === slug);
+  return {
+    title: post?.title,
+    description: post?.excerpt,
+  };
+}
 
 export default async function Post({
   params,
@@ -17,7 +31,7 @@ export default async function Post({
   if (!post) {
     notFound();
   }
-  
+
   const postsDirectory = path.join(process.cwd(), "content", "posts");
   const filePath = path.join(postsDirectory, `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, "utf8");

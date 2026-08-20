@@ -1,6 +1,11 @@
 import PostCard from "@/components/PostCard";
 import { posts } from "@/lib/posts";
 
+export const metadata = {
+  title: "Posts",
+  description: "Browse my latest posts about development, design, and creative experimentation.",
+};
+
 export default function Posts() {
   return (
     <section className="w-full max-w-3xl mx-auto px-8 py-16">

@@ -1,6 +1,11 @@
 import { projects } from "@/lib/projects";
 import ProjectCard from "@/components/ProjectCard";
 
+export const metadata = {
+  title: "Portfolio",
+  description: "View selected projects and creative work spanning development, design, and 3D art.",
+};
+
 export default function Portfolio() {
   return (
     <section className="max-w-3xl mx-auto px-8 py-16">
