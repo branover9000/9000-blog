@@ -21,7 +21,7 @@ function NavLink({ href, label, isActive }: { href: string; label: string; isAct
 export default function Navbar() {
   const pathname = usePathname();
   return (
-    <header className="w-full px-12 pt-4 shadow-[0_6px_8px_-8px_rgba(0,0,0,0.4)]">
+    <header className="w-full px-12 pt-4 bg-amber-25 shadow-[0_6px_8px_-8px_rgba(0,0,0,0.4)]">
       <div className="mx-auto flex w-full max-w-6xl items-end justify-between pb-4">
         <Link href="/" className="font-cabazon text-4xl leading-none tracking-wide transition-colors hover:text-red-800">
           Branover<span className="text-red-800">9000</span>
