@@ -4,27 +4,29 @@ import Link from "next/link";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="mt-10">
+    <article className="group overflow-hidden border-2 border-black bg-[#fffdf7] transition-colors hover:border-red-800">
       <Image
         src={project.image}
         alt={project.title}
         width={800}
         height={500}
-        className="w-100 h-auto"
+        className="h-64 w-full border-b-2 border-black object-cover transition-transform duration-500 group-hover:scale-105"
         loading="eager"
       />
-      <h2 className="font-cabazon text-3xl mt-4">
-        <Link href={project.link} className="hover:underline">
-          {project.title}
-        </Link>
-      </h2>
-      <p className="mt-2">{project.description}</p>
-      <div className="mt-3">
-        {project.technologies.map((technology) => (
-            <span key={technology} className="mr-3 text-sm">
+      <div className="p-6">
+        <h2 className="font-cabazon text-4xl leading-none">
+          <Link href={project.link} className="transition-colors hover:text-red-800">
+            {project.title}
+          </Link>
+        </h2>
+        <p className="mt-4 leading-relaxed">{project.description}</p>
+        <div className="mt-6 flex flex-wrap gap-2 border-t border-black pt-4">
+          {project.technologies.map((technology) => (
+            <span key={technology} className="border border-red-800 px-2 py-1 text-xs text-red-800">
                 {technology}
             </span>
-        ))}
+          ))}
+        </div>
       </div>
     </article>
   );

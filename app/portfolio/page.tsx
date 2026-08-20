@@ -8,9 +8,12 @@ export const metadata = {
 
 export default function Portfolio() {
   return (
-    <section className="max-w-3xl mx-auto px-8 py-16">
-      <h1 className="font-cabazon text-5xl text-red-800">Portfolio</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+    <section className="mx-auto w-full max-w-6xl px-12 py-20">
+      <header className="flex items-end justify-between border-b-2 border-black pb-8">
+        <h1 className="font-cabazon text-7xl leading-none text-red-800">Portfolio</h1>
+        <p className="max-w-sm text-right text-sm leading-relaxed">A growing collection of development, design, and 3D work.</p>
+      </header>
+      <div className="mt-10 grid grid-cols-2 gap-8">
         {projects.map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}

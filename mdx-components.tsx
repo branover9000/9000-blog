@@ -6,29 +6,29 @@ export const mdxComponents: MDXComponents = {
   PostImage,
 
   code: ({ children }) => (
-    <code className="px-1 py-0.5 rounded">{children}</code>
+    <code className="bg-black px-1.5 py-0.5 text-sm text-[#fffdf7]">{children}</code>
   ),
 
   blockquote: ({ children }) => (
-    <blockquote className="border-l-2 pl-4 my-6 italic">{children}</blockquote>
+    <blockquote className="my-8 border-l-4 border-red-800 pl-5 text-xl italic leading-relaxed">{children}</blockquote>
   ),
 
-  ol: ({ children }) => <ol className="list-decimal pl-6 mt-4">{children}</ol>,
+  ol: ({ children }) => <ol className="mt-5 list-decimal space-y-2 pl-6 leading-relaxed">{children}</ol>,
 
-  ul: ({ children }) => <ul className="list-disc pl-6 mt-4">{children}</ul>,
+  ul: ({ children }) => <ul className="mt-5 list-disc space-y-2 pl-6 leading-relaxed">{children}</ul>,
 
   h2: ({ children }) => (
-    <h2 className="font-cabazon text-3xl mt-8 mb-3">{children}</h2>
+    <h2 className="mt-12 border-t-2 border-red-800 pt-5 font-cabazon text-4xl leading-none">{children}</h2>
   ),
 
-  p: ({ children }) => <p className="mt-4 leading-7">{children}</p>,
+  p: ({ children }) => <p className="mt-5 leading-relaxed">{children}</p>,
 
   h3: ({ children }) => (
-    <h3 className="font-cabazon text-2xl mt-6 mb-2">{children}</h3>
+    <h3 className="mt-8 font-cabazon text-3xl leading-none">{children}</h3>
   ),
 
   a: ({ children, href }) => (
-    <a href={href} className="underline">
+    <a href={href} className="border-b-2 border-red-800 pb-0.5 text-red-800 transition-colors hover:border-black hover:text-black">
       {children}
     </a>
   ),
@@ -39,7 +39,7 @@ export const mdxComponents: MDXComponents = {
       alt={alt ?? ""}
       width={1200}
       height={800}
-      className="w-full h-auto mt-6"
+      className="mt-8 h-auto w-full border-2 border-black"
     />
   ),
 };

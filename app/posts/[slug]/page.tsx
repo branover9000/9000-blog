@@ -36,20 +36,18 @@ export default async function Post({
   const filePath = path.join(postsDirectory, `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, "utf8");
 
-
-
   return (
-    <article>
-      <Link href="/posts" className="inline-block text-sm underline mb-8">
+    <article className="mx-auto w-full max-w-4xl px-12 py-20">
+      <Link href="/posts" className="inline-block border-b-2 border-red-800 pb-1 text-sm text-red-800 transition-colors hover:border-black hover:text-black">
         ← Back to Posts
       </Link>
 
-      <header>
-        <h1 className="font-cabazon text-5xl text-red-800">{post.title}</h1>
-        <p className="text-sm mt-2">{post.date}</p>
+      <header className="mt-10 border-b-2 border-black pb-8">
+        <p className="text-sm text-red-800">{post.date}</p>
+        <h1 className="mt-3 font-cabazon text-7xl leading-none text-red-800">{post.title}</h1>
       </header>
 
-      <div className="mt-8 text-lg">
+      <div className="mt-10 text-lg leading-relaxed">
         <MDXRemote source={fileContent} components={mdxComponents} />
       </div>
     </article>
