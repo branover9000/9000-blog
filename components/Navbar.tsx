@@ -66,6 +66,7 @@ export default function Navbar() {
         width={193}
         height={17}
         className="mx-auto"
+        loading="eager"
         style={{ width: "450px", height: "auto" }}
       />
     </header>
