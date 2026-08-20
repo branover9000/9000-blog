@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Brandon",
+  title: {
+    default: "Branover9000 — Art, Games & Code's ",
+    template: "%s | Branover9000",
+  },
   description: "Personal portfolio and blog covering art, game development, and web development.",
 };
 
