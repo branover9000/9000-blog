@@ -12,7 +12,7 @@ export default function SocialLink({
   return (
     <a
       href={href}
-      className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-black bg-black text-white transition-colors hover:border-red-800 hover:bg-red-800"
+      className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-border bg-border text-inverse transition-colors hover:border-accent hover:bg-accent"
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}

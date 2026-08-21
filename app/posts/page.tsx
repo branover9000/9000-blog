@@ -10,7 +10,7 @@ export const metadata = {
 export default function Posts() {
   return (
     <section className="mx-auto w-full max-w-5xl px-12 py-20 max-md:px-6 max-md:py-12">
-      <header className="flex items-end justify-between border-b-2 border-black pb-8 max-md:flex-col max-md:items-start max-md:gap-4">
+      <header className="flex items-end justify-between border-b-2 border-border pb-8 max-md:flex-col max-md:items-start max-md:gap-4">
         <PageHeading>Posts</PageHeading>
         <p className="max-w-sm text-right text-sm leading-relaxed max-md:max-w-full max-md:text-left max-md:text-xs">Notes on development, design, and creative experimentation.</p>
       </header>

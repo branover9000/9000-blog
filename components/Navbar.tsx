@@ -22,8 +22,8 @@ function NavLink({
       onClick={onNavigate}
       className={
         isActive
-          ? "border-b-2 border-red-800 pb-1 text-red-800"
-          : "border-b-2 border-transparent pb-1 transition-colors hover:border-red-800 hover:text-red-800"
+          ? "border-b-2 border-accent pb-1 text-accent"
+          : "border-b-2 border-transparent pb-1 transition-colors hover:border-accent hover:text-accent"
       }
     >
       {label}
@@ -38,12 +38,12 @@ export default function Navbar() {
   return (
     <header className="w-full bg-amber-25 px-12 pt-4 shadow-[0_6px_8px_-8px_rgba(0,0,0,0.4)] max-md:px-6">
       <div className="mx-auto flex w-full max-w-6xl items-end justify-between pb-4 max-md:flex-row max-md:flex-wrap max-md:items-center max-md:gap-0">
-        <Link href="/" className="font-cabazon text-4xl leading-none tracking-wide transition-colors hover:text-red-800 max-md:text-3xl">
-          Branover<span className="text-red-800">9000</span>
+        <Link href="/" className="font-cabazon text-4xl leading-none tracking-wide transition-colors hover:text-accent max-md:text-3xl">
+          Branover<span className="text-accent">9000</span>
         </Link>
         <button
           type="button"
-          className="hidden h-10 w-10 items-center justify-center border-2 border-black text-xl transition-colors hover:border-red-800 hover:text-red-800 max-md:inline-flex"
+          className="hidden h-10 w-10 items-center justify-center border-2 border-border text-xl transition-colors hover:border-accent hover:text-accent max-md:inline-flex"
           aria-label="Toggle navigation menu"
           aria-controls="primary-navigation"
           aria-expanded={isMenuOpen}

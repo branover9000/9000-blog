@@ -39,12 +39,12 @@ export default async function Post({
 
   return (
     <article className="mx-auto w-full max-w-4xl px-12 py-20 max-md:px-6 max-md:py-12">
-      <Link href="/posts" className="inline-block border-b-2 border-red-800 pb-1 text-sm text-red-800 transition-colors hover:border-black hover:text-black">
+      <Link href="/posts" className="inline-block border-b-2 border-accent pb-1 text-sm text-accent transition-colors hover:border-border hover:text-border">
         ← Back to Posts
       </Link>
 
-      <header className="mt-10 border-b-2 border-black pb-8">
-        <p className="text-sm text-red-800">{post.date}</p>
+      <header className="mt-10 border-b-2 border-border pb-8">
+        <p className="text-sm text-accent">{post.date}</p>
         <PageHeading className="mt-3">{post.title}</PageHeading>
       </header>
 
