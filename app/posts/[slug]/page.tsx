@@ -1,6 +1,4 @@
-import { posts } from "@/lib/posts";
-import path from "path";
-import fs from "fs";
+import { getPostBySlug } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { mdxComponents } from "@/mdx-components";
 import Link from "next/link";
@@ -14,10 +12,15 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = posts.find((post) => post.slug === slug);
+  const post = getPostBySlug(slug);
+
+  if (!post) {
+    return {};
+  }
+
   return {
-    title: post?.title,
-    description: post?.excerpt,
+    title: post.title,
+    description: post.excerpt,
   };
 }
 
@@ -28,14 +31,10 @@ export default async function Post({
 }) {
   const { slug } = await params;
 
-  const post = posts.find((post) => post.slug === slug);
+  const post = getPostBySlug(slug);
   if (!post) {
     notFound();
   }
-
-  const postsDirectory = path.join(process.cwd(), "content", "posts");
-  const filePath = path.join(postsDirectory, `${slug}.mdx`);
-  const fileContent = fs.readFileSync(filePath, "utf8");
 
   return (
     <article className="mx-auto w-full max-w-4xl px-12 py-20 max-md:px-6 max-md:py-12">
@@ -49,7 +48,7 @@ export default async function Post({
       </header>
 
       <div className="mt-10 text-lg leading-relaxed max-md:text-base">
-        <MDXRemote source={fileContent} components={mdxComponents} />
+        <MDXRemote source={post.content} components={mdxComponents} />
       </div>
     </article>
   );

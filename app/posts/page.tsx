@@ -1,6 +1,6 @@
 import PostCard from "@/components/PostCard";
 import PageHeading from "@/components/PageHeading";
-import { posts } from "@/lib/posts";
+import { getAllPosts } from "@/lib/posts";
 
 export const metadata = {
   title: "Posts",
@@ -8,6 +8,8 @@ export const metadata = {
 };
 
 export default function Posts() {
+  const posts = getAllPosts();
+
   return (
     <section className="mx-auto w-full max-w-5xl px-12 py-20 max-md:px-6 max-md:py-12">
       <header className="flex items-end justify-between border-b-2 border-border pb-8 max-md:flex-col max-md:items-start max-md:gap-4">
@@ -16,7 +18,7 @@ export default function Posts() {
       </header>
       <div className="mt-2">
         {posts.map((post) => (
-          <PostCard key={post.id} post={post} />
+          <PostCard key={post.slug} post={post} />
         ))}
       </div>
     </section>
