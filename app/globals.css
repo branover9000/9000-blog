@@ -7,7 +7,7 @@
   --surface: #fffdf7;
   --border: #000;
   --text-inverse: #fff;
-  --font-display: "cabazon", serif;
+  --font-display: var(--font-pirata-one), serif;
   --font-body: var(--font-eb-garamond), serif;
 }
 

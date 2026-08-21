@@ -5,6 +5,7 @@ export type Project = {
   image: string;
   link: string;
   technologies: string[];
+  category: "design" | "web-development" | "game-development" | "art";
 };
 
 export const projects: Project[] = [
@@ -15,6 +16,7 @@ export const projects: Project[] = [
     image: "/images/react-movie-site.png",
     link: "https://react-movie-site-tan.vercel.app/",
     technologies: ["React", "Next.js", "TypeScript"],
+    category: "web-development",
   },
   {
     id: 2,
@@ -23,5 +25,6 @@ export const projects: Project[] = [
     image: "/images/react-movie-site.png",
     link: "https://react-movie-site-tan.vercel.app/",
     technologies: ["React", "Next.js", "TypeScript"],
+    category: "web-development",
   },
 ];

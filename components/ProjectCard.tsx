@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="mt-6 flex flex-wrap gap-2 border-t border-border pt-4">
           {project.technologies.map((technology) => (
             <span key={technology} className="border border-accent px-2 py-1 text-xs text-accent">
-                {technology}
+              {technology}
             </span>
           ))}
         </div>
