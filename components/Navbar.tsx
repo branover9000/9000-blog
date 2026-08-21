@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <header className="w-full bg-amber-25 px-12 pt-4 shadow-[0_6px_8px_-8px_rgba(0,0,0,0.4)] max-md:px-6">
       <div className="mx-auto flex w-full max-w-6xl items-end justify-between pb-4 max-md:flex-row max-md:flex-wrap max-md:items-center max-md:gap-0">
-        <Link href="/" className="font-cabazon text-4xl leading-none tracking-wide transition-colors hover:text-accent max-md:text-3xl">
+        <Link href="/" className="font-display text-4xl leading-none tracking-wide transition-colors hover:text-accent max-md:text-3xl">
           Branover<span className="text-accent">9000</span>
         </Link>
         <button
@@ -53,7 +53,7 @@ export default function Navbar() {
         </button>
         <nav
           id="primary-navigation"
-          className={`flex items-center gap-9 font-cabazon text-3xl leading-none max-md:order-3 max-md:mt-4 max-md:w-full max-md:flex-col max-md:items-start max-md:gap-3 max-md:text-xl ${isMenuOpen ? "max-md:flex" : "max-md:hidden"}`}
+          className={`flex items-center gap-9 font-display text-3xl leading-none max-md:order-3 max-md:mt-4 max-md:w-full max-md:flex-col max-md:items-start max-md:gap-3 max-md:text-xl ${isMenuOpen ? "max-md:flex" : "max-md:hidden"}`}
         >
           <NavLink href="/" label="Home" isActive={pathname === "/"} onNavigate={() => setIsMenuOpen(false)} />
           <NavLink href="/about" label="About" isActive={pathname === "/about"} onNavigate={() => setIsMenuOpen(false)} />

@@ -18,7 +18,7 @@ export default function About() {
       </header>
       <div className="grid grid-cols-2 gap-x-16 gap-y-12 pt-12 max-md:grid-cols-1 max-md:gap-x-4 max-md:gap-y-6">
         <section className="border-t-2 border-accent pt-5">
-          <h2 className="font-cabazon text-4xl leading-none max-md:text-2xl">Development</h2>
+          <h2 className="font-display text-4xl leading-none max-md:text-2xl">Development</h2>
           <p className="mt-4 leading-relaxed">Currently learning and working with:</p>
           <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-2 text-sm leading-relaxed max-md:grid-cols-1 max-md:gap-x-3 max-md:gap-y-1 max-md:text-xs">
             <li className="border border-border px-3 py-1">JavaScript</li>
@@ -30,7 +30,7 @@ export default function About() {
           </ul>
         </section>
         <section className="border-t-2 border-accent pt-5">
-          <h2 className="font-cabazon text-4xl leading-none max-md:text-2xl">Game Development</h2>
+          <h2 className="font-display text-4xl leading-none max-md:text-2xl">Game Development</h2>
           <p className="mt-4 leading-relaxed">
             I&apos;m interested in building 3D games and interactive experiences
             with Unreal Engine.
@@ -41,7 +41,7 @@ export default function About() {
           </p>
         </section>
         <section className="border-t-2 border-accent pt-5">
-          <h2 className="font-cabazon text-4xl leading-none max-md:text-2xl">3D Art</h2>
+          <h2 className="font-display text-4xl leading-none max-md:text-2xl">3D Art</h2>
           <p className="mt-4 leading-relaxed">
             I also create 3D characters and assets, using tools such as:
           </p>
@@ -54,7 +54,7 @@ export default function About() {
           </ul>
         </section>
         <section className="border-t-2 border-accent pt-5">
-          <h2 className="font-cabazon text-4xl leading-none max-md:text-2xl">What I&apos;m Working On</h2>
+          <h2 className="font-display text-4xl leading-none max-md:text-2xl">What I&apos;m Working On</h2>
           <p className="mt-4 leading-relaxed">
             I&apos;m constantly experimenting with new projects and learning new
             technologies along the way.

@@ -18,13 +18,13 @@ export const mdxComponents: MDXComponents = {
   ul: ({ children }) => <ul className="mt-5 list-disc space-y-2 pl-6 leading-relaxed max-md:mt-3">{children}</ul>,
 
   h2: ({ children }) => (
-    <h2 className="mt-12 border-t-2 border-accent pt-5 font-cabazon text-4xl leading-none max-md:mt-6 max-md:text-2xl">{children}</h2>
+    <h2 className="mt-12 border-t-2 border-accent pt-5 font-display text-4xl leading-none max-md:mt-6 max-md:text-2xl">{children}</h2>
   ),
 
   p: ({ children }) => <p className="mt-5 leading-relaxed max-md:mt-3">{children}</p>,
 
   h3: ({ children }) => (
-    <h3 className="mt-8 font-cabazon text-3xl leading-none max-md:mt-4 max-md:text-xl">{children}</h3>
+    <h3 className="mt-8 font-display text-3xl leading-none max-md:mt-4 max-md:text-xl">{children}</h3>
   ),
 
   a: ({ children, href }) => (

@@ -7,6 +7,8 @@
   --surface: #fffdf7;
   --border: #000;
   --text-inverse: #fff;
+  --font-display: "cabazon", serif;
+  --font-body: var(--font-eb-garamond), serif;
 }
 
 @theme inline {
@@ -16,16 +18,14 @@
   --color-surface: var(--surface);
   --color-border: var(--border);
   --color-inverse: var(--text-inverse);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-cabazon: "cabazon", serif;
-  --font-change: "change", sans-serif;
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
 body {
   background: var(--background);
   color: var(--text);
-  font-family: "change", sans-serif;
+  font-family: var(--font-body);
 }
 
 ::selection {

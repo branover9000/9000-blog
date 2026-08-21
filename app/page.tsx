@@ -15,8 +15,8 @@ export default function Home() {
           className="mx-auto mb-4 max-w-full"
           style={{ width: "230px", height: "auto" }}
         />
-        <h1 className="font-cabazon text-8xl leading-none text-accent max-md:text-5xl">Brandon Marshall</h1>
-        <p className="mt-2 font-cabazon text-6xl leading-none max-md:text-3xl">Creative Developer</p>
+        <h1 className="font-display text-8xl leading-none text-accent max-md:text-5xl">Brandon Marshall</h1>
+        <p className="mt-2 font-display text-6xl leading-none max-md:text-3xl">Creative Developer</p>
         <Image
           src="/images/dividers/navbar-divider2.svg"
           alt=""
@@ -25,7 +25,7 @@ export default function Home() {
           className="mx-auto my-6 max-w-full"
           style={{ width: "370px", height: "auto" }}
         />
-        <p className="font-change text-2xl italic leading-relaxed max-md:text-lg">
+        <p className="font-body text-2xl italic leading-relaxed max-md:text-lg">
           Learning, building, and turning{" "}
           <span className="text-accent">ideas</span> into{" "}
           <span className="text-accent">experiences.</span>

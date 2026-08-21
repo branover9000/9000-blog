@@ -6,7 +6,7 @@ export default function PostCard({ post }: { post: Post }) {
     <article className="group grid grid-cols-[150px_1fr] gap-8 border-b border-border py-9 max-md:grid-cols-1 max-md:gap-3 max-md:py-5">
       <p className="pt-1 text-sm leading-relaxed text-accent max-md:text-xs">{post.date}</p>
       <div>
-        <h2 className="font-cabazon text-4xl leading-none max-md:text-2xl">
+        <h2 className="font-display text-4xl leading-none max-md:text-2xl">
           <Link href={`/posts/${post.slug}`} className="transition-colors group-hover:text-accent">
             {post.title}
           </Link>

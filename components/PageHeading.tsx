@@ -7,5 +7,5 @@ export default function PageHeading({
   children: ReactNode;
   className?: string;
 }) {
-  return <h1 className={`font-cabazon text-7xl leading-none text-accent max-md:text-4xl ${className}`}>{children}</h1>;
+  return <h1 className={`font-display text-7xl leading-none text-accent max-md:text-4xl ${className}`}>{children}</h1>;
 }

@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         loading="eager"
       />
       <div className="p-6">
-        <h2 className="font-cabazon text-4xl leading-none max-md:text-2xl">
+        <h2 className="font-display text-4xl leading-none max-md:text-2xl">
           <Link href={project.link} className="transition-colors hover:text-accent">
             {project.title}
           </Link>
