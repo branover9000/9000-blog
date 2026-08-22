@@ -7,7 +7,7 @@ export default function Home() {
     <section className="mx-auto flex min-h-[calc(100vh-145px)] w-full max-w-6xl flex-col items-center justify-center px-12 pb-24 pt-8 text-center max-md:min-h-0 max-md:px-6 max-md:pb-12 max-md:pt-8">
       <div className="w-full">
         <Image
-          src="/images/skull.png"
+          src="/images/skull-red.png"
           alt="Skull illustration"
           width={256}
           height={274}
