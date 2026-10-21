@@ -1,68 +1,53 @@
 import PageHeading from "@/components/PageHeading";
 
+const skills = ["JavaScript", "React", "Next.js", "Node.js", "Tailwind CSS", "C++"];
+const tools = ["Blender", "ZBrush", "Unreal Engine", "Character Creator", "Marvelous Designer"];
+
 export const metadata = {
   title: "About Me",
-  description:
-    "Learn more about my background, interests, and the creative work I enjoy building.",
+  description: "Learn more about my background, interests, and the creative work I enjoy building.",
 };
 
 export default function About() {
   return (
-    <section className="mx-auto w-full max-w-5xl px-12 py-20 max-md:px-6 max-md:py-12">
-      <header>
-        <PageHeading>About Me</PageHeading>
-        <p className="mt-6 max-w-3xl text-xl leading-relaxed max-md:text-base">
-        I&apos;m a developer, 3D artist/designer, and game development
-        enthusiast who enjoys learning by building things.
-      </p>
+    <section className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <header className="grid grid-cols-12 border-b border-border pb-12">
+        <div className="col-span-12 lg:col-span-7">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">About / 9000</p>
+          <PageHeading className="mt-6">A creative practice in progress.</PageHeading>
+        </div>
+        <p className="col-span-12 mt-10 max-w-xl self-end text-2xl leading-relaxed lg:col-span-4 lg:col-start-9 lg:mt-0">
+          I&apos;m a developer, 3D artist/designer, and game development enthusiast who enjoys learning by building things.
+        </p>
       </header>
-      <div className="grid grid-cols-2 gap-x-16 gap-y-12 pt-12 max-md:grid-cols-1 max-md:gap-x-4 max-md:gap-y-6">
-        <section className="border-t-2 border-accent pt-5">
-          <h2 className="font-display text-4xl leading-none max-md:text-2xl">Development</h2>
-          <p className="mt-4 leading-relaxed">Currently learning and working with:</p>
-          <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-2 text-sm leading-relaxed max-md:grid-cols-1 max-md:gap-x-3 max-md:gap-y-1 max-md:text-xs">
-            <li className="border border-border px-3 py-1">JavaScript</li>
-            <li className="border border-border px-3 py-1">React</li>
-            <li className="border border-border px-3 py-1">Next.js</li>
-            <li className="border border-border px-3 py-1">Node.js</li>
-            <li className="border border-border px-3 py-1">Tailwind CSS</li>
-            <li className="border border-border px-3 py-1">C++</li>
+      <div className="grid grid-cols-12">
+        <section className="col-span-12 border-b border-border py-10 lg:col-span-6 lg:border-r lg:pr-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">01 / Development</p>
+          <h2 className="mt-4 font-display text-6xl leading-[0.82]">Code as a material.</h2>
+          <p className="mt-6 max-w-xl text-xl leading-relaxed">Currently learning and working with:</p>
+          <ul className="mt-7 grid grid-cols-2 border-l border-t border-border text-lg sm:grid-cols-3">
+            {skills.map((skill) => <li key={skill} className="border-b border-r border-border px-4 py-3">{skill}</li>)}
           </ul>
         </section>
-        <section className="border-t-2 border-accent pt-5">
-          <h2 className="font-display text-4xl leading-none max-md:text-2xl">Game Development</h2>
-          <p className="mt-4 leading-relaxed">
-            I&apos;m interested in building 3D games and interactive experiences
-            with Unreal Engine.
-          </p>
-          <p className="mt-4 leading-relaxed">
-            I enjoy experimenting with gameplay systems, environments, characters,
-            and different game ideas.
-          </p>
+        <section className="col-span-12 border-b border-border py-10 lg:col-span-6 lg:pl-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">02 / Game development</p>
+          <h2 className="mt-4 font-display text-6xl leading-[0.82]">Worlds to explore.</h2>
+          <p className="mt-6 max-w-xl text-xl leading-relaxed">I&apos;m interested in building 3D games and interactive experiences with Unreal Engine.</p>
+          <p className="mt-5 max-w-xl text-xl leading-relaxed">I enjoy experimenting with gameplay systems, environments, characters, and different game ideas.</p>
         </section>
-        <section className="border-t-2 border-accent pt-5">
-          <h2 className="font-display text-4xl leading-none max-md:text-2xl">3D Art</h2>
-          <p className="mt-4 leading-relaxed">
-            I also create 3D characters and assets, using tools such as:
-          </p>
-          <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-2 text-sm leading-relaxed max-md:grid-cols-1 max-md:gap-x-3 max-md:gap-y-1 max-md:text-xs">
-            <li className="border border-border px-3 py-1">Blender</li>
-            <li className="border border-border px-3 py-1">ZBrush</li>
-            <li className="border border-border px-3 py-1">Unreal Engine</li>
-            <li className="border border-border px-3 py-1">Character Creator</li>
-            <li className="border border-border px-3 py-1">Marvelous Designer</li>
+        <section className="col-span-12 border-b border-border py-10 lg:col-span-6 lg:border-r lg:pr-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">03 / 3D art</p>
+          <h2 className="mt-4 font-display text-6xl leading-[0.82]">Form &amp; character.</h2>
+          <p className="mt-6 max-w-xl text-xl leading-relaxed">I also create 3D characters and assets, using tools such as:</p>
+          <ul className="mt-7 grid grid-cols-2 border-l border-t border-border text-lg">
+            {tools.map((tool) => <li key={tool} className="border-b border-r border-border px-4 py-3">{tool}</li>)}
           </ul>
         </section>
-        <section className="border-t-2 border-accent pt-5">
-          <h2 className="font-display text-4xl leading-none max-md:text-2xl">What I&apos;m Working On</h2>
-          <p className="mt-4 leading-relaxed">
-            I&apos;m constantly experimenting with new projects and learning new
-            technologies along the way.
-          </p>
-          <p className="mt-4 leading-relaxed">
-            Most of my repositories are a mix of web development, game development,
-            3D art.
-          </p>
+        <section className="col-span-12 border-b border-border py-10 lg:col-span-6 lg:pl-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">04 / Right now</p>
+          <h2 className="mt-4 font-display text-6xl leading-[0.82]">Keep making.</h2>
+          <p className="mt-6 max-w-xl text-xl leading-relaxed">I&apos;m constantly experimenting with new projects and learning new technologies along the way.</p>
+          <p className="mt-5 max-w-xl text-xl leading-relaxed">Most of my repositories are a mix of web development, game development, and 3D art.</p>
         </section>
       </div>
     </section>

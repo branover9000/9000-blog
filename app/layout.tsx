@@ -10,7 +10,7 @@ const ebGaramond = EB_Garamond({
 });
 
 const pirataOne = Pirata_One({
-  variable: "--font-pirata-one",
+  variable: "--font-cabazon",
   subsets: ["latin"],
   weight: "400",
 });
@@ -29,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${ebGaramond.variable} ${pirataOne.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col text-xl">
+      <body className="flex min-h-full flex-col text-lg">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -1,60 +1,48 @@
-import { projects } from "@/lib/projects";
 import PageHeading from "@/components/PageHeading";
 import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/lib/projects";
 
 export const metadata = {
   title: "Portfolio",
   description: "View selected projects and creative work spanning development, design, and 3D art.",
 };
 
+const categories = [
+  { key: "art", label: "Art" },
+  { key: "design", label: "Design" },
+  { key: "web-development", label: "Web Development" },
+  { key: "game-development", label: "Game Development" },
+] as const;
+
 export default function Portfolio() {
-  const artProjects = projects.filter((project) => project.category === "art");
-  const designProjects = projects.filter((project) => project.category === "design");
-  const webDevelopmentProjects = projects.filter((project) => project.category === "web-development");
-  const gameDevelopmentProjects = projects.filter((project) => project.category === "game-development");
-
   return (
-    <section className="mx-auto w-full max-w-6xl px-12 py-20 max-md:px-6 max-md:py-12">
-      <header className="flex items-end justify-between border-b-2 border-border pb-8 max-md:flex-col max-md:items-start max-md:gap-4">
-        <PageHeading>Portfolio</PageHeading>
-        <p className="max-w-sm text-right text-sm leading-relaxed max-md:max-w-full max-md:text-left max-md:text-xs">A growing collection of development, design, and 3D work.</p>
+    <section className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <header className="grid grid-cols-12 border-b border-border pb-12">
+        <div className="col-span-12 lg:col-span-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Selected work / archive</p>
+          <PageHeading className="mt-6">Portfolio</PageHeading>
+        </div>
+        <p className="col-span-12 mt-8 max-w-sm self-end text-xl leading-relaxed lg:col-span-3 lg:col-start-10 lg:mt-0">A growing collection of development, design, and 3D work.</p>
       </header>
-      <div className="mt-12 grid grid-cols-2 gap-x-12 gap-y-16 max-md:grid-cols-1 max-md:gap-y-12">
-        <section>
-          <h2 className="border-b-2 border-accent pb-3 font-display text-5xl leading-none max-md:text-3xl">Art</h2>
-          <div className="mt-8 space-y-8 max-md:space-y-4">
-            {artProjects.map((project) => (
-              <ProjectCard project={project} key={project.id} />
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="border-b-2 border-accent pb-3 font-display text-5xl leading-none max-md:text-3xl">Design</h2>
-          <div className="mt-8 space-y-8 max-md:space-y-4">
-            {designProjects.map((project) => (
-              <ProjectCard project={project} key={project.id} />
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="border-b-2 border-accent pb-3 font-display text-5xl leading-none max-md:text-3xl">Web Development</h2>
-          <div className="mt-8 space-y-8 max-md:space-y-4">
-            {webDevelopmentProjects.map((project) => (
-              <ProjectCard project={project} key={project.id} />
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="border-b-2 border-accent pb-3 font-display text-5xl leading-none max-md:text-3xl">Game Development</h2>
-          <div className="mt-8 space-y-8 max-md:space-y-4">
-            {gameDevelopmentProjects.map((project) => (
-              <ProjectCard project={project} key={project.id} />
-            ))}
-          </div>
-        </section>
+      <div className="mt-16 space-y-20 lg:mt-24">
+        {categories.map(({ key, label }, index) => {
+          const categoryProjects = projects.filter((project) => project.category === key);
+          return (
+            <section key={key} className="grid grid-cols-12 gap-y-8 lg:gap-x-12">
+              <div className="col-span-12 lg:col-span-3">
+                <p className="text-sm font-semibold text-accent">0{index + 1}</p>
+                <h2 className="mt-2 font-display text-6xl leading-[0.82]">{label}</h2>
+              </div>
+              <div className="col-span-12 lg:col-span-9">
+                {categoryProjects.length > 0 ? (
+                  <div className="grid gap-7 sm:grid-cols-2">{categoryProjects.map((project) => <ProjectCard project={project} key={project.id} />)}</div>
+                ) : (
+                  <p className="border-y border-border py-8 text-xl italic text-muted">Work in progress.</p>
+                )}
+              </div>
+            </section>
+          );
+        })}
       </div>
     </section>
   );

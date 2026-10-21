@@ -1,34 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #efe8e0;
-  --text: #17120f;
-  --accent: #991b1b;
-  --surface: #fffdf7;
-  --border: #000;
-  --text-inverse: #fff;
-  --font-display: var(--font-pirata-one), serif;
-  --font-body: var(--font-eb-garamond), serif;
+  --background: #eee7dc;
+  --paper: #f8f4ec;
+  --ink: #211914;
+  --muted-ink: #685c51;
+  --accent: #8f201c;
+  --accent-dark: #681613;
+  --rule: #30251e;
+  --font-display: var(--font-cabazon), serif;
+  --font-body: var(--font-eb-garamond), Georgia, serif;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--text);
+  --color-foreground: var(--ink);
+  --color-surface: var(--paper);
+  --color-muted: var(--muted-ink);
   --color-accent: var(--accent);
-  --color-surface: var(--surface);
-  --color-border: var(--border);
-  --color-inverse: var(--text-inverse);
+  --color-border: var(--rule);
+  --color-inverse: var(--paper);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--text);
+  min-width: 320px;
+  background-color: var(--background);
+  background-image: linear-gradient(rgba(48, 37, 30, 0.035) 1px, transparent 1px);
+  background-size: 100% 5px;
+  color: var(--ink);
   font-family: var(--font-body);
+}
+
+a,
+button,
+input,
+textarea {
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 ::selection {
   background: var(--accent);
-  color: var(--surface);
+  color: var(--paper);
 }
