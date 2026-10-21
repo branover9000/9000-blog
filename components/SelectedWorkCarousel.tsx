@@ -58,7 +58,7 @@ export default function SelectedWorkCarousel({ projects }: { projects: Project[]
       aria-roledescription="carousel"
       aria-label="Selected work"
       tabIndex={0}
-      className="min-w-0 md:col-span-8"
+      className="min-w-0"
       onKeyDown={handleKeyDown}
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}

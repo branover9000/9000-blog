@@ -64,31 +64,33 @@ export default function Home() {
 
       <div className="site-width">
         <section className="grid grid-cols-1 gap-y-6 border-t border-border/35 py-10 md:grid-cols-12 md:gap-8 md:py-14">
-          <header className="md:col-span-4">
-            <p className="eyebrow text-accent">01 / Selected work</p>
+          <header className="bg-accent px-5 py-6 text-inverse md:col-span-4 md:px-6 md:py-8">
+            <p className="eyebrow text-surface">01 / Selected work</p>
             <h2 className="mt-3 font-display text-6xl leading-[0.86] md:text-7xl">Work, in the making.</h2>
             <p className="mt-4 max-w-sm text-lg leading-relaxed">
               Studies, prototypes, and finished pieces from an evolving creative practice.
             </p>
-            <Link href="/portfolio" className="interface-link mt-5 inline-flex min-h-11 items-center border-b border-accent text-accent transition-colors hover:border-border hover:text-border">
+            <Link href="/portfolio" className="interface-link mt-5 inline-flex min-h-11 items-center border-b border-surface text-surface transition-colors hover:border-border hover:text-border">
               Explore the work <span aria-hidden="true" className="ml-2">↗</span>
             </Link>
           </header>
-          <SelectedWorkCarousel projects={projects} />
+          <div className="md:col-span-8">
+            <SelectedWorkCarousel projects={projects} />
+          </div>
         </section>
 
         <section className="grid grid-cols-1 gap-y-6 border-t border-border/35 py-10 md:grid-cols-12 md:gap-8 md:py-14">
-          <header className="md:col-span-4">
-            <p className="eyebrow text-accent">02 / Notes &amp; process</p>
+          <header className="bg-accent px-5 py-6 text-inverse md:order-2 md:col-span-4 md:px-6 md:py-8">
+            <p className="eyebrow text-surface">02 / Notes &amp; process</p>
             <h2 className="mt-3 font-display text-6xl leading-[0.86] md:text-7xl">Notes from the workbench.</h2>
             <p className="mt-4 max-w-sm text-lg leading-relaxed">
               Observations, small discoveries, and the questions that surface while making.
             </p>
-            <Link href="/posts" className="interface-link mt-5 inline-flex min-h-11 items-center border-b border-accent text-accent transition-colors hover:border-border hover:text-border">
+            <Link href="/posts" className="interface-link mt-5 inline-flex min-h-11 items-center border-b border-surface text-surface transition-colors hover:border-border hover:text-border">
               Read the journal <span aria-hidden="true" className="ml-2">↗</span>
             </Link>
           </header>
-          <div className="md:col-span-8">
+          <div className="md:order-1 md:col-span-8">
             {posts.map((post) => <PostCard key={post.slug} post={post} />)}
           </div>
         </section>
