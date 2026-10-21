@@ -12,9 +12,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(18rem,1fr)]">
+      <section className="site-width grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(18rem,1fr)]">
         <div className="py-10 text-foreground md:py-16">
-          <div className="site-width">
             <p className="eyebrow text-accent">Branover9000 / Art · Games · Code</p>
             <h1 className="mt-7 font-display text-[clamp(3.5rem,10.5vw,10rem)] leading-[0.88] tracking-[-0.035em] text-foreground">
               <span className="block">Brandon</span>
@@ -38,10 +37,9 @@ export default function Home() {
               >
                 A little about me <span aria-hidden="true" className="ml-2">↗</span>
               </Link>
-            </div>
           </div>
         </div>
-        <aside className="grid grid-cols-1 bg-accent px-5 py-6 text-inverse md:px-6 md:py-8">
+        <aside className="mx-2 my-4 grid grid-cols-1 bg-accent px-5 py-6 text-inverse md:mx-6 md:my-6 md:px-6 md:py-8">
           <p className="eyebrow text-surface">A practice in progress</p>
           <div className="my-6 grid aspect-square w-full max-w-[19rem] place-items-center justify-self-center md:my-0 md:self-center">
             <Image
