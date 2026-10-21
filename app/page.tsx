@@ -43,10 +43,10 @@ export default function Home() {
           <p className="eyebrow text-surface">A practice in progress</p>
           <div className="my-6 grid aspect-square w-full max-w-[19rem] place-items-center justify-self-center md:my-0 md:self-center">
             <Image
-              src="/images/skull-red.png"
-              alt="White skull illustration"
-              width={256}
-              height={274}
+              src="/images/landing-logo.png"
+              alt="Branover9000 logo illustration"
+              width={768}
+              height={823}
               priority
               className="h-full w-full object-contain brightness-0 invert drop-shadow-[0_4px_6px_rgba(0,0,0,0.14)]"
             />
