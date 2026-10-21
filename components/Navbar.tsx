@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBars } from "react-icons/fa6";
+import { FaBars, FaXmark } from "react-icons/fa6";
 import { useState } from "react";
 
 function NavLink({
@@ -20,10 +20,11 @@ function NavLink({
     <Link
       href={href}
       onClick={onNavigate}
+      aria-current={isActive ? "page" : undefined}
       className={
         isActive
-          ? "border-b border-accent text-accent"
-          : "border-b border-transparent transition-colors hover:border-accent hover:text-accent"
+          ? "border-b border-accent pb-2 text-accent"
+          : "border-b border-transparent pb-2 transition-colors hover:border-accent hover:text-accent"
       }
     >
       {label}
@@ -36,24 +37,25 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="w-full border-b border-border px-5 sm:px-8 lg:px-12">
-      <div className="mx-auto flex w-full max-w-[1440px] items-end justify-between py-5 max-md:flex-row max-md:flex-wrap max-md:items-center max-md:gap-0">
-        <Link href="/" className="font-display text-4xl leading-none tracking-tight transition-colors hover:text-accent sm:text-5xl">
+    <header className="w-full border-b border-border/30 bg-background shadow-[0_2px_8px_rgba(23,18,15,0.04)]">
+      <div className="site-width flex min-h-24 flex-wrap items-center justify-between gap-x-8 gap-y-4 py-4">
+        <Link href="/" className="font-display text-[clamp(1.5rem,5vw,3rem)] leading-[0.85] tracking-wide transition-colors hover:text-accent">
           Branover<span className="text-accent">9000</span>
         </Link>
         <button
           type="button"
-          className="hidden h-11 w-11 items-center justify-center border border-border text-lg hover:border-accent hover:text-accent max-md:inline-flex"
-          aria-label="Toggle navigation menu"
+          className="hidden h-12 w-12 items-center justify-center border border-border/50 text-xl transition-colors hover:border-accent hover:text-accent max-md:inline-flex"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-controls="primary-navigation"
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((open) => !open)}
         >
-          <FaBars aria-hidden="true" />
+          {isMenuOpen ? <FaXmark aria-hidden="true" /> : <FaBars aria-hidden="true" />}
         </button>
         <nav
           id="primary-navigation"
-          className={`flex items-center gap-6 font-body text-lg font-semibold leading-none lg:gap-8 lg:text-xl max-md:order-3 max-md:mt-6 max-md:w-full max-md:border-t max-md:border-border max-md:pt-5 max-md:flex-col max-md:items-start max-md:gap-4 ${isMenuOpen ? "max-md:flex" : "max-md:hidden"}`}
+          aria-label="Main navigation"
+          className={`flex items-center gap-7 text-xl leading-tight max-md:order-3 max-md:w-full max-md:flex-col max-md:items-stretch max-md:gap-0 max-md:border-t max-md:border-border/30 max-md:pt-2 ${isMenuOpen ? "max-md:flex" : "max-md:hidden"}`}
         >
           <NavLink href="/" label="Home" isActive={pathname === "/"} onNavigate={() => setIsMenuOpen(false)} />
           <NavLink href="/about" label="About" isActive={pathname === "/about"} onNavigate={() => setIsMenuOpen(false)} />

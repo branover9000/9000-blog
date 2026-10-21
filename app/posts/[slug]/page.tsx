@@ -17,21 +17,17 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   if (!post) notFound();
 
   return (
-    <article className="mx-auto max-w-[1280px] px-5 py-12 sm:px-8 lg:px-12 lg:py-20">
-      <div className="grid grid-cols-12">
-        <aside className="col-span-12 mb-10 lg:col-span-3 lg:mb-0 lg:pr-12">
-          <Link href="/posts" className="inline-block border-b border-accent pb-1 text-base font-semibold text-accent hover:border-border hover:text-foreground">← All writing</Link>
-        </aside>
-        <div className="col-span-12 lg:col-span-9">
-          <header className="border-b border-border pb-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">{post.date}</p>
-            <h1 className="mt-6 max-w-4xl font-display text-7xl leading-[0.82] tracking-tight sm:text-8xl lg:text-9xl">{post.title}</h1>
-            <p className="mt-8 max-w-2xl text-2xl leading-relaxed text-muted">{post.excerpt}</p>
-          </header>
-          <div className="post-content mt-12 max-w-3xl text-xl leading-relaxed sm:text-2xl">
-            <MDXRemote source={post.content} components={mdxComponents} />
-          </div>
-        </div>
+    <article className="site-width max-w-6xl py-10 md:py-14">
+      <Link href="/posts" className="inline-flex min-h-11 items-center border-b border-accent font-semibold text-accent transition-colors hover:border-border hover:text-border">
+        <span aria-hidden="true" className="mr-2">←</span> Back to Posts
+      </Link>
+      <header className="mt-5 border-y border-border/35 py-7 md:py-10">
+        <p className="eyebrow text-accent">{post.date}</p>
+        <h1 className="mt-4 max-w-5xl font-display text-[clamp(2.5rem,7.5vw,7rem)] leading-[0.9] text-accent">{post.title}</h1>
+        <p className="mt-5 max-w-3xl text-xl leading-relaxed text-muted">{post.excerpt}</p>
+      </header>
+      <div className="article-body max-w-3xl py-7 text-xl leading-relaxed md:py-10">
+        <MDXRemote source={post.content} components={mdxComponents} />
       </div>
     </article>
   );

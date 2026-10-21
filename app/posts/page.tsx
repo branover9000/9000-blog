@@ -11,15 +11,19 @@ export default function Posts() {
   const posts = getAllPosts();
 
   return (
-    <section className="mx-auto max-w-[1280px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
-      <header className="grid grid-cols-12 border-b border-border pb-12">
-        <div className="col-span-12 lg:col-span-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Notebook / archive</p>
-          <PageHeading className="mt-6">Writing</PageHeading>
+    <section className="site-width py-10 md:py-14">
+      <header className="grid grid-cols-1 gap-6 border-b border-border/35 py-5 md:grid-cols-12 md:items-end md:gap-8 md:pb-10">
+        <div className="md:col-span-7">
+          <p className="eyebrow mb-4 text-accent">Journal / Notes &amp; process</p>
+          <PageHeading>Posts</PageHeading>
         </div>
-        <p className="col-span-12 mt-8 max-w-sm self-end text-xl leading-relaxed lg:col-span-3 lg:col-start-10 lg:mt-0">Notes on development, design, and creative experimentation.</p>
+        <p className="max-w-lg text-xl leading-relaxed md:col-span-5 md:justify-self-end">
+          Notes on development, design, and creative experimentation.
+        </p>
       </header>
-      <div>{posts.map((post) => <PostCard key={post.slug} post={post} />)}</div>
+      <div className="max-w-6xl divide-y divide-border/30">
+        {posts.map((post) => <PostCard key={post.slug} post={post} />)}
+      </div>
     </section>
   );
 }

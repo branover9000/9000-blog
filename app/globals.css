@@ -1,27 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #eee7dc;
-  --paper: #f8f4ec;
-  --ink: #211914;
-  --muted-ink: #685c51;
-  --accent: #8f201c;
-  --accent-dark: #681613;
-  --rule: #30251e;
-  --font-display: var(--font-cabazon), serif;
-  --font-body: var(--font-eb-garamond), Georgia, serif;
+  --background: #efe8e0;
+  --text: #17120f;
+  --accent: #991b1b;
+  --surface: #fffdf7;
+  --border: #574a40;
+  --text-inverse: #fffdf7;
+  --page-gutter: clamp(1.25rem, 5vw, 5rem);
+  --content-width: 90rem;
+  --soft-shadow: 0 3px 12px rgba(23, 18, 15, 0.1);
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--ink);
-  --color-surface: var(--paper);
-  --color-muted: var(--muted-ink);
+  --color-foreground: var(--text);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
   --color-accent: var(--accent);
-  --color-border: var(--rule);
-  --color-inverse: var(--paper);
-  --font-display: var(--font-display);
-  --font-body: var(--font-body);
+  --color-inverse: var(--text-inverse);
+  --color-muted: #685c51;
+  --shadow-soft: var(--soft-shadow);
+  --font-display: var(--font-cabazon), Georgia, serif;
+  --font-body: var(--font-eb-garamond), Georgia, serif;
 }
 
 * {
@@ -35,9 +36,7 @@ html {
 body {
   min-width: 320px;
   background-color: var(--background);
-  background-image: linear-gradient(rgba(48, 37, 30, 0.035) 1px, transparent 1px);
-  background-size: 100% 5px;
-  color: var(--ink);
+  color: var(--text);
   font-family: var(--font-body);
 }
 
@@ -56,7 +55,56 @@ textarea:focus-visible {
   outline-offset: 3px;
 }
 
+img {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-width {
+  width: calc(100% - var(--page-gutter) - var(--page-gutter));
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
+.eyebrow {
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.article-body > :first-child {
+  margin-top: 0;
+}
+
+.article-body :where(p, li) {
+  overflow-wrap: anywhere;
+}
+
+.article-body :where(pre, img) {
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
 ::selection {
   background: var(--accent);
-  color: var(--paper);
+  color: var(--surface);
 }

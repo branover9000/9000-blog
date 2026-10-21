@@ -8,14 +8,14 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <section className="mx-auto max-w-[1280px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
-      <div className="grid grid-cols-12 border-t border-border pt-10 lg:pt-16">
-        <div className="col-span-12 lg:col-span-5 lg:pr-14">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Correspondence</p>
-          <PageHeading className="mt-6">Let&apos;s talk.</PageHeading>
-          <p className="mt-8 max-w-md text-2xl leading-relaxed">Want to get in touch? Send me a message.</p>
+    <section className="site-width">
+      <div className="grid grid-cols-1 gap-8 border-b border-border/35 py-10 md:grid-cols-12 md:gap-10 md:py-14">
+        <div className="md:col-span-5">
+          <p className="eyebrow mb-4 text-accent">Contact / Get in touch</p>
+          <PageHeading>Let&apos;s talk.</PageHeading>
+          <p className="mt-5 max-w-md text-xl leading-relaxed">Want to get in touch? Send me a message.</p>
         </div>
-        <div className="col-span-12 mt-12 lg:col-span-6 lg:col-start-7 lg:mt-0">
+        <div className="md:col-span-7 md:border-l md:border-border/35 md:pl-10">
           <ContactForm />
         </div>
       </div>

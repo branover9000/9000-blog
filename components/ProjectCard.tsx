@@ -1,28 +1,48 @@
-import type { Project } from "@/lib/projects";
 import Image from "next/image";
 import Link from "next/link";
+import type { Project } from "@/lib/projects";
 
-export default function ProjectCard({ project }: { project: Project }) {
+const categoryLabels: Record<Project["category"], string> = {
+  art: "Art",
+  design: "Design",
+  "web-development": "Web Development",
+  "game-development": "Game Development",
+};
+
+export default function ProjectCard({
+  project,
+  featured = false,
+}: {
+  project: Project;
+  featured?: boolean;
+}) {
   return (
-    <article className="group overflow-hidden border border-border bg-surface transition-colors hover:border-accent">
+    <article
+      className={`group grid grid-cols-1 py-5 md:gap-7 ${
+        featured ? "md:grid-cols-[1.15fr_0.85fr] md:items-center" : "md:grid-cols-[0.65fr_1.35fr] md:items-center"
+      }`}
+    >
       <Image
         src={project.image}
-        alt={project.title}
+        alt={`${project.title} project preview`}
         width={800}
         height={500}
-        className="h-72 w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.03] max-md:h-52"
-        loading="eager"
+        className={`w-full border border-border/15 object-cover shadow-soft transition-shadow group-hover:shadow-md ${
+          featured ? "aspect-[16/10]" : "aspect-[16/9]"
+        }`}
+        loading={featured ? "eager" : "lazy"}
       />
-      <div className="p-6 sm:p-8">
-        <h2 className="font-display text-5xl leading-[0.9] max-md:text-4xl">
-          <Link href={project.link} className="transition-colors hover:text-accent">
+      <div className="pt-5 md:py-2">
+        <p className="eyebrow text-accent">{categoryLabels[project.category]}</p>
+        <h2 className={`mt-2 font-display leading-[0.92] ${featured ? "text-5xl max-md:text-4xl" : "text-4xl max-md:text-3xl"}`}>
+          <Link href={project.link} className="transition-colors group-hover:text-accent">
             {project.title}
           </Link>
         </h2>
-        <p className="mt-5 text-xl leading-relaxed">{project.description}</p>
-        <div className="mt-7 flex flex-wrap gap-2 border-t border-border pt-5">
+        <p className="mt-3 text-lg leading-relaxed">{project.description}</p>
+        <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2">
           {project.technologies.map((technology) => (
-            <span key={technology} className="border border-accent px-2.5 py-1 text-sm text-accent">
+            <span key={technology} className="text-sm font-semibold text-accent">
               {technology}
             </span>
           ))}
