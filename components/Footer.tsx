@@ -18,7 +18,7 @@ export default function Footer() {
             <Link href="/portfolio" className="transition-colors hover:text-accent">Portfolio</Link>
             <Link href="/contact" className="transition-colors hover:text-accent">Contact</Link>
           </nav>
-          <p className="mt-4 font-display text-xl">Make, learn, return.</p>
+          <p className="mt-4 font-display text-xl">Build, Break, repeat.</p>
         </div>
       </div>
     </footer>
