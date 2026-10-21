@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import PostCard from "@/components/PostCard";
-import ProjectCard from "@/components/ProjectCard";
 import SocialLink from "@/components/SocialLink";
+import SelectedWorkCarousel from "@/components/SelectedWorkCarousel";
 import { getAllPosts } from "@/lib/posts";
 import { projects } from "@/lib/projects";
 
@@ -63,7 +63,7 @@ export default function Home() {
       </section>
 
       <div className="site-width">
-        <section className="grid grid-cols-1 gap-y-6 py-10 md:grid-cols-12 md:gap-8 md:py-14">
+        <section className="grid grid-cols-1 gap-y-6 border-t border-border/35 py-10 md:grid-cols-12 md:gap-8 md:py-14">
           <header className="md:col-span-4">
             <p className="eyebrow text-accent">01 / Selected work</p>
             <h2 className="mt-3 font-display text-6xl leading-[0.86] md:text-7xl">Work, in the making.</h2>
@@ -74,14 +74,10 @@ export default function Home() {
               Explore the work <span aria-hidden="true" className="ml-2">↗</span>
             </Link>
           </header>
-          <div className="divide-y divide-border/30 md:col-span-8">
-            {projects.map((project, index) => (
-              <ProjectCard project={project} featured={index === 0} key={project.id} />
-            ))}
-          </div>
+          <SelectedWorkCarousel projects={projects} />
         </section>
 
-        <section className="grid grid-cols-1 gap-y-6 py-10 md:grid-cols-12 md:gap-8 md:py-14">
+        <section className="grid grid-cols-1 gap-y-6 border-t border-border/35 py-10 md:grid-cols-12 md:gap-8 md:py-14">
           <header className="md:col-span-4">
             <p className="eyebrow text-accent">02 / Notes &amp; process</p>
             <h2 className="mt-3 font-display text-6xl leading-[0.86] md:text-7xl">Notes from the workbench.</h2>
@@ -97,7 +93,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="grid grid-cols-1 gap-6 py-9 md:grid-cols-12 md:items-center">
+        <section className="grid grid-cols-1 gap-6 border-t border-border/35 py-9 md:grid-cols-12 md:items-center">
           <div className="md:col-span-7">
             <p className="eyebrow text-accent">Across the practice</p>
             <h2 className="mt-3 font-display text-5xl leading-[0.9] md:text-6xl">Web, games, and 3D.</h2>
