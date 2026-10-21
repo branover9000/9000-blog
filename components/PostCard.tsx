@@ -12,8 +12,8 @@ export default function PostCard({ post }: { post: Post }) {
           </Link>
         </h2>
         <p className="mt-3 max-w-3xl text-lg leading-relaxed">{post.excerpt}</p>
-        <Link href={`/posts/${post.slug}`} className="mt-4 inline-flex min-h-11 items-center border-b border-accent pb-1 font-semibold text-accent transition-colors hover:border-border hover:text-border">
-          Read post <span aria-hidden="true" className="ml-2">↗</span>
+        <Link href={`/posts/${post.slug}`} className="interface-link mt-4 inline-flex min-h-11 items-center border-b border-accent pb-1 text-accent transition-colors hover:border-border hover:text-border">
+          Read the note <span aria-hidden="true" className="ml-2">↗</span>
         </Link>
       </div>
     </article>

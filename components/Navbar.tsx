@@ -55,7 +55,7 @@ export default function Navbar() {
         <nav
           id="primary-navigation"
           aria-label="Main navigation"
-          className={`flex items-center gap-7 text-xl leading-tight max-md:order-3 max-md:w-full max-md:flex-col max-md:items-stretch max-md:gap-0 max-md:border-t max-md:border-border/30 max-md:pt-2 ${isMenuOpen ? "max-md:flex" : "max-md:hidden"}`}
+          className={`font-interface flex items-center gap-7 text-sm font-semibold leading-tight max-md:order-3 max-md:w-full max-md:flex-col max-md:items-stretch max-md:gap-0 max-md:border-t max-md:border-border/30 max-md:pt-2 ${isMenuOpen ? "max-md:flex" : "max-md:hidden"}`}
         >
           <NavLink href="/" label="Home" isActive={pathname === "/"} onNavigate={() => setIsMenuOpen(false)} />
           <NavLink href="/about" label="About" isActive={pathname === "/about"} onNavigate={() => setIsMenuOpen(false)} />

@@ -23,6 +23,7 @@
   --shadow-soft: var(--soft-shadow);
   --font-display: var(--font-cabazon), Georgia, serif;
   --font-body: var(--font-eb-garamond), Georgia, serif;
+  --font-interface: var(--font-dm-sans), Arial, sans-serif;
 }
 
 * {
@@ -73,12 +74,23 @@ textarea {
 }
 
 .eyebrow {
-  font-family: Arial, sans-serif;
-  font-size: 0.8rem;
+  font-family: var(--font-interface);
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
-  line-height: 1.4;
+  letter-spacing: 0.1em;
+  line-height: 1.45;
   text-transform: uppercase;
+}
+
+.font-interface {
+  font-family: var(--font-interface);
+}
+
+.interface-link {
+  font-family: var(--font-interface);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .article-body > :first-child {

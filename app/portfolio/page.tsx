@@ -23,7 +23,7 @@ export default function Portfolio() {
           <PageHeading>Portfolio</PageHeading>
         </div>
         <p className="max-w-lg text-xl leading-relaxed md:col-span-5 md:justify-self-end">
-          A growing collection of development, design, and 3D work.
+          A growing archive of studies, prototypes, and finished work across development, design, and 3D art.
         </p>
       </header>
       <div className="space-y-12 py-8 md:space-y-16 md:py-10">

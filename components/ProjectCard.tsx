@@ -39,10 +39,10 @@ export default function ProjectCard({
             {project.title}
           </Link>
         </h2>
-        <p className="mt-3 text-lg leading-relaxed">{project.description}</p>
+        <p className="mt-3 max-w-prose text-lg leading-relaxed">{project.description}</p>
         <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2">
           {project.technologies.map((technology) => (
-            <span key={technology} className="text-sm font-semibold text-accent">
+            <span key={technology} className="font-interface text-xs font-semibold tracking-wide text-accent">
               {technology}
             </span>
           ))}

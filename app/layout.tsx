@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Pirata_One } from "next/font/google";
+import { DM_Sans, EB_Garamond, Pirata_One } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -17,6 +17,12 @@ const pirataOne = Pirata_One({
   display: "swap",
 });
 
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Branover9000 — Art, Games & Code",
@@ -27,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${ebGaramond.variable} ${pirataOne.variable} h-full antialiased`}>
+    <html lang="en" className={`${ebGaramond.variable} ${pirataOne.variable} ${dmSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col text-lg">
         <a
           href="#main-content"

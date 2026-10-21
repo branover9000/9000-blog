@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "My First Project",
-    description: "A short description of my project.",
+    description: "An early web experiment built to explore component structure, responsive presentation, and a focused viewing experience.",
     image: "/images/react-movie-site.png",
     link: "https://react-movie-site-tan.vercel.app/",
     technologies: ["React", "Next.js", "TypeScript"],
@@ -21,7 +21,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "My Second Project",
-    description: "Another project I've worked on.",
+    description: "A continuing study in shaping a small interface through iteration, with attention to structure, type, and everyday use.",
     image: "/images/react-movie-site.png",
     link: "https://react-movie-site-tan.vercel.app/",
     technologies: ["React", "Next.js", "TypeScript"],

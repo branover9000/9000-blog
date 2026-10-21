@@ -14,7 +14,7 @@ export default function ContactForm() {
   return (
     <>
       <form action={handleSubmit} className="flex flex-col gap-5">
-        <label htmlFor="contact-name" className="flex flex-col gap-2 text-base font-semibold">
+        <label htmlFor="contact-name" className="font-interface flex flex-col gap-2 text-sm font-semibold">
           Name
           <input
             id="contact-name"
@@ -25,7 +25,7 @@ export default function ContactForm() {
             className="min-h-14 border-x-0 border-t-0 border-b border-border/50 bg-transparent px-4 py-3 text-lg font-normal outline-none transition-colors focus:border-accent"
           />
         </label>
-        <label htmlFor="contact-email" className="flex flex-col gap-2 text-base font-semibold">
+        <label htmlFor="contact-email" className="font-interface flex flex-col gap-2 text-sm font-semibold">
           Email
           <input
             id="contact-email"
@@ -36,7 +36,7 @@ export default function ContactForm() {
             className="min-h-14 border-x-0 border-t-0 border-b border-border/50 bg-transparent px-4 py-3 text-lg font-normal outline-none transition-colors focus:border-accent"
           />
         </label>
-        <label htmlFor="contact-message" className="flex flex-col gap-2 text-base font-semibold">
+        <label htmlFor="contact-message" className="font-interface flex flex-col gap-2 text-sm font-semibold">
           Message
           <textarea
             id="contact-message"
@@ -45,11 +45,11 @@ export default function ContactForm() {
             className="min-h-44 border-x-0 border-t-0 border-b border-border/50 bg-transparent px-4 py-3 text-lg font-normal outline-none transition-colors focus:border-accent"
           />
         </label>
-        <button type="submit" className="min-h-14 w-fit border border-border bg-border px-7 font-display text-3xl leading-none text-inverse shadow-soft transition-colors hover:border-accent hover:bg-accent">
-          Send message →
+        <button type="submit" className="font-interface min-h-12 w-fit border border-border bg-border px-6 text-sm font-semibold text-inverse shadow-soft transition-colors hover:border-accent hover:bg-accent">
+          Send message <span aria-hidden="true">→</span>
         </button>
       </form>
-      {sent && <p className="mt-5 border-l border-accent pl-3 text-accent">Message sent!</p>}
+      {sent && <p className="font-interface mt-5 border-l border-accent pl-3 text-sm font-medium text-accent">Your message has been sent.</p>}
     </>
   );
 }

@@ -13,7 +13,7 @@ export default function Contact() {
         <div className="md:col-span-5">
           <p className="eyebrow mb-4 text-accent">Contact / Get in touch</p>
           <PageHeading>Let&apos;s talk.</PageHeading>
-          <p className="mt-5 max-w-md text-xl leading-relaxed">Want to get in touch? Send me a message.</p>
+          <p className="mt-5 max-w-md text-xl leading-relaxed">Have a question or a thought to share? Leave a note and I&apos;ll get back to you.</p>
         </div>
         <div className="md:col-span-7 md:border-l md:border-border/35 md:pl-10">
           <ContactForm />
